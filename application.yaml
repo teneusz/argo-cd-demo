@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/teneusz/argo-workflow-demo.git
     targetRevision: master
-    path: /
+    path: .
   destination:
     server: https://kubernetes.default.svc
     namespace: argo
