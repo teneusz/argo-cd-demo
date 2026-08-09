@@ -11,4 +11,4 @@ spec:
     path: apps/argo-workflow
   destination:
     server: https://kubernetes.default.svc
-    namespace: argo
+    namespace: argo-workflows
