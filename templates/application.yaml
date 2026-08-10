@@ -1,18 +1,18 @@
-{{- foreach app in .Values.apps}}
+{{- range .Values.apps}}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{app.name}}
+  name: {{.name}}
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: {{app.source.repoURL}}
-    targetRevision: {{app.source.targetRevision}}
-    path: {{app.source.path}}
+    repoURL: {{.source.repoURL}}
+    targetRevision: {{.source.targetRevision}}
+    path: {{.source.path}}
   destination:
-    server: {{app.destination.server | default .Values.defaults.destination.server}}
-    namespace: {{app.destination.namespace | default .Values.defaults.destination.namespace}}
+    server: {{.destination.server | default .Values.defaults.destination.server}}
+    namespace: {{ap.destination.namespace | default .Values.defaults.destination.namespace}}
   syncPolicy:
     automated:
       prune: true
