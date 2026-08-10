@@ -22,7 +22,7 @@ spec:
 kind: Application
 metadata:
   name: demo-workflow-config
-  namespace: argocd
+  namespace: argo-workflows
 spec:
   project: default
   source:
