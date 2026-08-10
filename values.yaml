@@ -17,6 +17,9 @@ apps:
       repoURL: https://github.com/teneusz/argo-workflow-demo.git
       targetRevision: master
       path: apps/demo
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: argo-workflows
   - name: harbor
     source:
       repoURL: https://github.com/teneusz/argo-workflow-demo.git
