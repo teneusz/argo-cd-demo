@@ -12,7 +12,7 @@ spec:
     path: {{.source.path}}
   destination:
     server: {{.destination.server | default .Values.defaults.destination.server}}
-    namespace: {{ap.destination.namespace | default .Values.defaults.destination.namespace}}
+    namespace: {{.destination.namespace | default .Values.defaults.destination.namespace}}
   syncPolicy:
     automated:
       prune: true
