@@ -11,8 +11,8 @@ spec:
     targetRevision: {{.source.targetRevision}}
     path: {{.source.path}}
   destination:
-    server: {{.destination.server | default .Values.defaults.destination.server}}
-    namespace: {{.destination.namespace | default .Values.defaults.destination.namespace}}
+    server: {{.destination.server}}
+    namespace: {{.destination.namespace }}
   syncPolicy:
     automated:
       prune: true
