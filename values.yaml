@@ -1,0 +1,28 @@
+defaults:
+  applicationNamespace: argocd
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argo-workflows
+apps:
+  - name: argo-workflow
+    source:
+      repoURL: https://github.com/teneusz/argo-workflow-demo.git
+      targetRevision: master
+      path: apps/argo-workflow
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: argo-workflows
+  - name: templates
+    source:
+      repoURL: https://github.com/teneusz/argo-workflow-demo.git
+      targetRevision: master
+      path: apps/demo
+  - name: harbor
+    source:
+      repoURL: https://github.com/teneusz/argo-workflow-demo.git
+      targetRevision: master
+      path: apps/harbor
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: harbor
+  
